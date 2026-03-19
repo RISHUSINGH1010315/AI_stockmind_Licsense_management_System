@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+/* Tailwind reusable input */
+.input{
+  @apply w-full p-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-indigo-500;
+}
+
+/* ---------- LOGIN PAGE CUSTOM STYLES ---------- */
+
+/* Background */
+.bg{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Glass card */
+.card{
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:50px;
+  border-radius:20px;
+  width:360px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+  z-index:10;
+}
+
+.title{
+  color:white;
+  font-size:32px;
+  margin-bottom:5px;
+}
+
+.subtitle{
+  color:#94a3b8;
+  margin-bottom:25px;
+}
+
+/* Buttons */
+.loginBtn{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(45deg,#3b82f6,#06b6d4);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.loginBtn:hover{
+  transform:scale(1.05);
+}
+
+.registerBtn{
+  margin-top:10px;
+  background:none;
+  border:1px solid #3b82f6;
+  padding:10px;
+  width:100%;
+  border-radius:10px;
+  color:#3b82f6;
+  cursor:pointer;
+}
+
+.registerText{
+  color:#94a3b8;
+  margin-top:15px;
+}
+
+/* Glowing blobs */
+.blob{
+  position:absolute;
+  width:400px;
+  height:400px;
+  border-radius:50%;
+  filter:blur(150px);
+}
+
+.one{
+  background:#3b82f6;
+  top:-100px;
+  left:-100px;
+}
+
+.two{
+  background:#06b6d4;
+  bottom:-100px;
+  right:-100px;
+}
+
+/* Table hover */
+.tableRow:hover {
+  background: #0f172a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}

@@ -1,9 +1,18 @@
 const { Resend } = require("resend");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend = null;
+
+if (process.env.RESEND_API_KEY) {
+  resend = new Resend(process.env.RESEND_API_KEY);
+}
 
 const sendEmail = async (to, subject, html) => {
   try {
+    if (!resend) {
+      console.log("Resend not configured, skipping email");
+      return;
+    }
+
     const data = await resend.emails.send({
       from: "StockMind <onboarding@resend.dev>",
       to,

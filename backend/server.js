@@ -15,10 +15,7 @@ require("./cron/subscriptionExpiryCron");
 const app = express();
 
 /* ================= CORS ================= */
-app.use(cors({
-  origin: "*",
-  credentials: true
-}));
+app.use(cors());;
 
 /* ================= BODY PARSER ================= */
 app.use(express.json());
